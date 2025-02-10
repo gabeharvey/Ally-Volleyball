@@ -80,7 +80,7 @@ function Card({ frontImg, name, bio, funFact, cardNumber, flipSound }) {
 
 
   <Box mb={2}>
-    <img src="volleyball-image.png" alt="Team Logo" style={{ width: '60px', height: 'auto' }} />
+    <img src="sa-elite-logo.png" alt="Team Logo" style={{ width: '60px', height: 'auto' }} />
   </Box>
 
   <Text
