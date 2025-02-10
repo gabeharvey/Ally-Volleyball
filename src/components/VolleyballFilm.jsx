@@ -95,7 +95,7 @@ function VolleyballFilm() {
       align="center"
       justify="center"
       p={{ base: 5, md: 10 }}
-      bgImage="url('/volleyball.png')"
+      bgImage="url('/volleyball-2.png')"
       bgSize="contain"
       bgPosition="center"
       bgRepeat="no-repeat"
@@ -125,7 +125,7 @@ function VolleyballFilm() {
         border="none"
       >
         <img
-          src="/volleyball-image.png"
+          src="/volleyball-2.png"
           alt="Volleyball Net"
           style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
         />

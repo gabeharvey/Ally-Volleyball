@@ -200,7 +200,7 @@ function PlayerProfile() {
         border="none"
       >
         <img 
-          src="/basketball-image.png" 
+          src="/volleyball-2.png" 
           alt="Player Image" 
           style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
         />

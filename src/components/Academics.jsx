@@ -47,7 +47,7 @@ function Academics() {
         transition={{ duration: 2, ease: 'easeOut' }}
       >
         <Image 
-          src="/ai-basketball-placeholder.png" 
+          src="/book.png" 
           alt="Ally's Student Photo"
           borderRadius="12px"
           w="100%" 

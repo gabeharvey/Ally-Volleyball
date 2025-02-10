@@ -214,7 +214,7 @@ function PlayerCards() {
       align="center"
       justify="center"
       p={{ base: 5, md: 10 }}
-      bgImage="url('/volleyball.png')"
+    //   bgImage="url('/volleyball.png')"
       bgSize="contain"
       bgPosition="center"
       bgRepeat="no-repeat"
