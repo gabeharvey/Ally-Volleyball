@@ -83,7 +83,7 @@ function VolleyballFilm() {
         {
           videoSrc: "../video8.mp4",
           title: "Libero Leadership",
-          description: "Directing the Defense with Energy and Focus",
+          description: "Directing Defense with Energy and Focus",
         },
       ];       
 
