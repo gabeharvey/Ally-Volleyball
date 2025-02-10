@@ -10,7 +10,7 @@ function Media() {
       url: "https://news4sanantonio.com",
     },
     {
-      title: "Ally Rosa has Clutch Performance in Mission Concepcion Tournament",
+      title: "Ally Rosa has Clutch Performance",
       url: "https://news4sanantonio.com",
     },
   ];
