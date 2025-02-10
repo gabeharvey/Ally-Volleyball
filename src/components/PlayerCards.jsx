@@ -221,13 +221,17 @@ function PlayerCards() {
       mt={{ base: 12, md: 16 }}
       mb={{ base: 12, md: 16 }}
     >
-      <Text fontSize="3xl" fontWeight="medium" color="#E6E6FA" fontFamily="'Bungee', serif">
+    <Box textAlign="center">
+    <Text fontSize="3xl" fontWeight="medium" color="#E6E6FA" fontFamily="'Bungee', serif">
         Player Cards
-      </Text>
-      <Text fontSize="xl" fontWeight="medium" color="#E6E6FA" fontFamily="'Bungee', serif">
-        Click on a card to see more info
-      </Text>
+    </Text>
+    </Box>
 
+      <Box textAlign="center">
+        <Text fontSize="xl" fontWeight="medium" color="#E6E6FA" fontFamily="'Bungee', serif">
+            Click on a card to see more info
+        </Text>
+        </Box>
       <SimpleGrid
         columns={columns}
         spacing={{ base: 3, sm: 5 }}
