@@ -23,7 +23,7 @@ function Contact() {
       <MotionBox
         w={{ base: '90%', md: '600px' }}
         bgColor="#4B4B4B"
-        bgImage="linear-gradient(-45deg, #38393d 25%, transparent 25%, transparent 50%, #38393d 50%, #38393d 75%, transparent 75%, transparent)"
+        bgImage="linear-gradient(-45deg, #E6E6FA 25%, transparent 25%, transparent 50%, #E6E6FA 50%, #E6E6FA 75%, transparent 75%, transparent)"
         bgSize="1px 1px"
         borderRadius="12px"
         borderColor="#FFD700"
@@ -36,7 +36,7 @@ function Contact() {
       >
         <Grid gap={4}>
           <FormControl id="name">
-            <FormLabel color=" #E6E6FA" fontFamily="'Bungee', serif">
+            <FormLabel color=" #734F96" fontFamily="'Bungee', serif">
               Name
             </FormLabel>
             <Input
@@ -44,13 +44,13 @@ function Contact() {
               bgColor="#F8F8FF"
               color="#38383d"
               borderRadius="8px"
-              borderColor="#FFD700"
+              borderColor="#734F96"
               _placeholder={{ color: 'gray.500' }}
             />
           </FormControl>
 
           <FormControl id="email">
-            <FormLabel color=" #E6E6FA" fontFamily="'Bungee', serif">
+            <FormLabel color=" #734F96" fontFamily="'Bungee', serif">
               Email
             </FormLabel>
             <Input
@@ -59,13 +59,13 @@ function Contact() {
               bgColor="#F8F8FF"
               color="#38393d"
               borderRadius="8px"
-              borderColor="#FFD700"
+              borderColor="#734F96"
               _placeholder={{ color: 'gray.500' }}
             />
           </FormControl>
 
           <FormControl id="message">
-            <FormLabel color=" #E6E6FA" fontFamily="'Bungee', serif">
+            <FormLabel color=" #734F96" fontFamily="'Bungee', serif">
               Message
             </FormLabel>
             <Textarea
@@ -73,7 +73,7 @@ function Contact() {
               bgColor="#F8F8FF"
               color="#38393d"
               borderRadius="8px"
-              borderColor="#FFD700"
+              borderColor="#734F96"
               _placeholder={{ color: 'gray.500' }}
               rows={4}
             />
@@ -81,7 +81,7 @@ function Contact() {
 
           <Button
             mt={4}
-            bgColor="#FFD700"
+            bgColor="#F8F8FF"
             color=" #734F96"
             minW="100%"
             maxW="45%"
@@ -90,9 +90,9 @@ function Contact() {
             fontWeight="medium"
             fontSize="xl"
             borderRadius="8px"
-            borderColor="#FFD700"
+            borderColor="#734F96"
             borderWidth="3px"
-            _hover={{ borderColor: '#E6E6FA' }}
+            _hover={{ borderColor: '#FFD700' }}
           >
             Submit
           </Button>
