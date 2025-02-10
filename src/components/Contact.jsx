@@ -22,7 +22,7 @@ function Contact() {
       
       <MotionBox
         w={{ base: '90%', md: '600px' }}
-        bgColor="#4B4B4B"
+        bgColor="#E6E6FA"
         bgImage="linear-gradient(-45deg, #E6E6FA 25%, transparent 25%, transparent 50%, #E6E6FA 50%, #E6E6FA 75%, transparent 75%, transparent)"
         bgSize="1px 1px"
         borderRadius="12px"
