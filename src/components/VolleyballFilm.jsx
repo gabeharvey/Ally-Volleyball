@@ -51,7 +51,7 @@ function VolleyballFilm() {
           description: "Laying Everything on the Line",
         },
         {
-          videoSrc: "ally-vid-3.mov",
+          videoSrc: "ally-serve.mp4",
           title: "Excellent Serve",
           description: "Pinpoint Accuracy on Serve",
         },
