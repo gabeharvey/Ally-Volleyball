@@ -3,7 +3,7 @@ import PlayerCards from './PlayerCards';
 import Contact from './Contact';
 // import StatTracker from './StatTracker';
 import VolleyballFilm from './VolleyballFilm';
-import Offers from './Offers';
+// import Offers from './Offers';
 import Media from './Media';
 import Academics from './Academics';
 // import AthleteProgression from './AthleteProgression';
@@ -32,9 +32,9 @@ const MainLayout = () => {
       <div id="academics">
         <Academics />
       </div>
-      <div id="offers">
+      {/* <div id="offers">
         <Offers />
-      </div>
+      </div> */}
       <div id="contact">
         <Contact />
       </div>
