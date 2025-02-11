@@ -95,7 +95,7 @@ function VolleyballFilm() {
       align="center"
       justify="center"
       p={{ base: 5, md: 10 }}
-      bgImage="url('/volleyball-2.png')"
+    //   bgImage="url('/volleyball-2.png')"
       bgSize="contain"
       bgPosition="center"
       bgRepeat="no-repeat"
