@@ -51,19 +51,19 @@ function VolleyballFilm() {
           description: "Laying Everything on the Line",
         },
         {
-          videoSrc: "Ally-vid-2.MOV",
-          title: "Diving Pancake",
-          description: "Incredible Hustle to Keep the Ball Alive",
+          videoSrc: "ally-serve.mp4",
+          title: "Excellent Serve",
+          description: "Pinpoint Accuracy on Serve",
         },
         {
-          videoSrc: "Ally-vid-3.MOV",
-          title: "Perfect Pass",
-          description: "Delivering the Ball Right to the Setter",
+          videoSrc: "ally-leadership.mp4",
+          title: "Leadership",
+          description: "Demonstrating Leadership Qualities Between Plays",
         },
         {
-          videoSrc: "Ally-vid-4.MOV",
-          title: "Backrow Defense",
-          description: "Reading the Hit and Digging with Precision",
+          videoSrc: "ally-command.mp4",
+          title: "Command",
+          description: "Command and Strategy with Positivity",
         },
         {
           videoSrc: "Ally-vid-5.MOV",
