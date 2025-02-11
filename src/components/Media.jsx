@@ -7,11 +7,11 @@ function Media() {
   const mediaArticles = [
     {
       title: "Ally Rosa Shines on the Court",
-      url: "https://news4sanantonio.com",
+      url: "https://www.expressnews.com/sports/high-school/?utm_source=marketing&utm_medium=google&utm_campaign=content_acquisition&gad_source=1&gclid=CjwKCAiA5Ka9BhB5EiwA1ZVtvKAQPFLun4dJaHWT7I5ctFof54J1JWUhoJ5YV0k4FbEKbCVp0aufjxoCA_wQAvD_BwE",
     },
     {
       title: "Ally Rosa has Clutch Performance",
-      url: "https://news4sanantonio.com",
+      url: "https://www.expressnews.com/sports/high-school/?utm_source=marketing&utm_medium=google&utm_campaign=content_acquisition&gad_source=1&gclid=CjwKCAiA5Ka9BhB5EiwA1ZVtvKAQPFLun4dJaHWT7I5ctFof54J1JWUhoJ5YV0k4FbEKbCVp0aufjxoCA_wQAvD_BwE",
     },
   ];
 
