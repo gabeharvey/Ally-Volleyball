@@ -191,7 +191,7 @@ function PlayerCards() {
       cardNumber: 6,
     },
     {
-      frontImg: "ally-37.jpeg",
+      frontImg: "ally-39.jpeg",
       name: "Ally Rosa",
       bio: "Ally Rosa turns defense into offense, setting up perfect plays after digging impossible shots.",
       funFact: "Has a collection of libero jerseys from around the world.",
