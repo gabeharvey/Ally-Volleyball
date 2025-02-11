@@ -5,11 +5,11 @@ const MotionBox = motion.create(Box);
 
 function Academics() {
   const academicAchievements = [
-    "Graduated with Honors from Incarnate Word",
+    "3.8 GPA Taft High School",
     "Dean's List for 8 semesters",
     "Recipient of the Academic Excellence Scholarship",
-    "Completed a major in Computer Science with a focus on AI",
-    "Co-Founder of the Women in Tech Club at Incarnate Word",
+    "Completed a course in Computer Science with a focus on AI",
+    "Co-Founder of the Women in Tech Club at Taft High School",
     "Volunteered as a mentor for aspiring medical professionals"
   ];
 
