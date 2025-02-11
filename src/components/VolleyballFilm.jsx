@@ -62,28 +62,28 @@ function VolleyballFilm() {
         },
         {
           videoSrc: "ally-command.mp4",
-          title: "Command",
+          title: "Maintaining Command",
           description: "Command and Strategy with Positivity",
         },
         {
-          videoSrc: "Ally-vid-5.MOV",
-          title: "Serve Receive Mastery",
-          description: "Controlling the Game from the Backrow",
+          videoSrc: "ally-ready.mp4",
+          title: "Always Alert",
+          description: "Alert and in Position",
         },
         {
-          videoSrc: "../video6.mp4",
-          title: "Relentless Coverage",
-          description: "Covering Every Inch of the Court",
+          videoSrc: "ally-teammate.mp4",
+          title: "Commands Respect",
+          description: "Maintaining Respect and Command of Teammates",
         },
         {
-          videoSrc: "../video7.mp4",
-          title: "Clutch Defensive Play",
-          description: "Turning Defense into Offense",
+          videoSrc: "ally-calm",
+          title: "Calm Under Pressure",
+          description: "Always Calm an Collected in High Pressure",
         },
         {
-          videoSrc: "../video8.mp4",
+          videoSrc: "libero-leadership.mp4",
           title: "Libero Leadership",
-          description: "Directing Defense with Energy and Focus",
+          description: "Vocal and Locked In During Play",
         },
       ];       
 

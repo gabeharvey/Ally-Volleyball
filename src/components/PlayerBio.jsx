@@ -15,7 +15,7 @@ function PlayerProfile() {
   };
 
   const player = {
-    frontImg: "ally-1.jpeg",
+    frontImg: "ally-40.jpeg",
     secondImg: "ai-basketball-placeholder.png",
     name: "Player Bio", 
     bioCategories: [
