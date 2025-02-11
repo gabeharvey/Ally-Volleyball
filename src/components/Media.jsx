@@ -42,7 +42,7 @@ function Media() {
             <Link
               href={article.url}
               isExternal
-              color="#4B0082"
+              color="#734F96"
               fontWeight="bold"
               fontSize="lg" 
               p={3} 
