@@ -46,9 +46,9 @@ function VideoCard({ videoSrc, title, description }) {
 function VolleyballFilm() {
     const videos = [
         {
-          videoSrc: "Ally-vid-1.MOV",
-          title: "Lightning Quick Dig",
-          description: "Reacting Fast to Save the Play",
+          videoSrc: "fearless-dive.mp4",
+          title: "Fearless Dive",
+          description: "Laying Everything on the Line",
         },
         {
           videoSrc: "Ally-vid-2.MOV",
