@@ -7,6 +7,7 @@ import VolleyballFilm from './VolleyballFilm';
 import Media from './Media';
 import Academics from './Academics';
 // import AthleteProgression from './AthleteProgression';
+import AskAlly from './AskAlly';
 
 const MainLayout = () => {
   return (
@@ -16,6 +17,9 @@ const MainLayout = () => {
       </div>
       <div id="volleyball-film">
         <VolleyballFilm />
+      </div>
+      <div id="ask-ally">
+        <AskAlly />
       </div>
       <div id="player-cards">
         <PlayerCards />
