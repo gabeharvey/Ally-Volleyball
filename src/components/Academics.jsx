@@ -5,7 +5,7 @@ const MotionBox = motion.create(Box);
 
 function Academics() {
   const academicAchievements = [
-    "3.9 GPA Taft High School",
+    "3.8 GPA Taft High School",
     "Dean's List for 8 semesters",
     "Recipient of the Academic Excellence Scholarship",
     "Completed a course in Computer Science with a focus on AI",
