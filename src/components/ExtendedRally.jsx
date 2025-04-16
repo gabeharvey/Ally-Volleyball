@@ -1,4 +1,4 @@
-import { Box, VStack, Heading, Flex } from '@chakra-ui/react';
+import { Box, VStack, Heading, Flex, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 const MotionBox = motion(Box);
@@ -16,6 +16,11 @@ function ExtendedRally() {
       >
         Extended Rally
       </Heading>
+            <Box textAlign="center">
+              <Text fontSize="xl" fontWeight="medium" color="#E6E6FA" fontFamily="'Bungee', serif">
+                  Additional Highlight Reels
+              </Text>
+              </Box>
       <Flex
         direction={{ base: 'column', md: 'row' }}
         alignItems="center"
