@@ -4,10 +4,11 @@ import Contact from './Contact';
 // import StatTracker from './StatTracker';
 import VolleyballFilm from './VolleyballFilm';
 // import Offers from './Offers';
-import Media from './Media';
+// import Media from './Media';
 import Academics from './Academics';
 // import AthleteProgression from './AthleteProgression';
 import AskAlly from './AskAlly';
+import ExtendedRally from './ExtendedRally';
 
 const MainLayout = () => {
   return (
@@ -30,8 +31,11 @@ const MainLayout = () => {
       {/* <div id="stat-tracker">
         <StatTracker />
       </div> */}
-      <div id="media">
+      {/* <div id="media">
         <Media />
+      </div> */}
+      <div id="extended-rally">
+        <ExtendedRally />
       </div>
       <div id="academics">
         <Academics />
