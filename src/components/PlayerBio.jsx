@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { VStack, Heading, Box, Flex, Grid, Text, IconButton } from '@chakra-ui/react';
 import { FaFacebookF, FaInstagram, FaSnapchatGhost, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useSpring, animated } from '@react-spring/web';
 
 function PlayerProfile() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -27,6 +28,19 @@ function PlayerProfile() {
       { title: "High School", description: "Taft High School" },
     ],
   };
+
+  const volleyballAnimation = useSpring({
+    loop: true,
+    from: { transform: 'translateY(0px) rotate(0deg)' },
+    to: async (next) => {
+      // eslint-disable-next-line no-constant-condition
+      while (1) {
+        await next({ transform: 'translateY(-20px) rotate(30deg)' });
+        await next({ transform: 'translateY(0px) rotate(0deg)' });
+      }
+    },
+    config: { tension: 150, friction: 10 },
+  });  
 
   return (
     <VStack
@@ -189,7 +203,6 @@ function PlayerProfile() {
           </Flex>
         </Box>
       </Flex>
-
       <Box
         w="100%"
         h="300px"
@@ -199,12 +212,19 @@ function PlayerProfile() {
         bg="transparent"
         border="none"
       >
-        <img 
-          src="/volleyball-2.png" 
-          alt="Player Image" 
-          style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+        <animated.img
+          src="/volleyball-2.png"
+          alt="Player Image"
+          style={{
+            maxWidth: '100%',
+            maxHeight: '100%',
+            objectFit: 'contain',
+            ...volleyballAnimation,
+            willChange: 'transform',
+          }}
         />
       </Box>
+
     </VStack>
   );
 }

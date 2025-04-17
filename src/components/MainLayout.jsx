@@ -1,12 +1,10 @@
 import PlayerBio from './PlayerBio';
 import PlayerCards from './PlayerCards';
 import Contact from './Contact';
-// import StatTracker from './StatTracker';
 import VolleyballFilm from './VolleyballFilm';
 // import Offers from './Offers';
 // import Media from './Media';
 import Academics from './Academics';
-// import AthleteProgression from './AthleteProgression';
 import AskAlly from './AskAlly';
 import ExtendedRally from './ExtendedRally';
 
@@ -25,12 +23,6 @@ const MainLayout = () => {
       <div id="player-cards">
         <PlayerCards />
       </div>
-      {/* <div id="athlete-progression">
-        <AthleteProgression />
-      </div> */}
-      {/* <div id="stat-tracker">
-        <StatTracker />
-      </div> */}
       {/* <div id="media">
         <Media />
       </div> */}
