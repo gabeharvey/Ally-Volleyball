@@ -61,39 +61,37 @@ function Card({ frontImg, name, bio, funFact, cardNumber, flipSound }) {
         </Box>
 
         <Box
-  bgGradient="linear(to-t, rgba(189, 252, 201, 0.7), rgba(152, 251, 152, 0.8), rgba(60, 179, 113, 0.6), rgba(46, 139, 87, 0.8))"
-  position="absolute"
-  style={{ backfaceVisibility: 'hidden' }}
-  w="100%"
-  h="100%"
-  borderRadius="12px"
-  borderColor="#E6E6FA" 
-  borderWidth="3px"
-  display="flex"
-  flexDirection="column"
-  alignItems="center"
-  justifyContent="center"
-  boxShadow="0 0 25px rgba(189, 252, 201, 0.9), 0 0 50px rgba(46, 139, 87, 0.7)"
-  transform="rotateY(180deg)"
-  p={5}
->
-
-
+          bgGradient="linear(to-t, rgba(189, 252, 201, 0.7), rgba(152, 251, 152, 0.8), rgba(60, 179, 113, 0.6), rgba(46, 139, 87, 0.8))"
+          position="absolute"
+          style={{ backfaceVisibility: 'hidden' }}
+          w="100%"
+          h="100%"
+          borderRadius="12px"
+          borderColor="#E6E6FA" 
+          borderWidth="3px"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          boxShadow="0 0 25px rgba(189, 252, 201, 0.9), 0 0 50px rgba(46, 139, 87, 0.7)"
+          transform="rotateY(180deg)"
+          p={5}
+        >
   <Box mb={2}>
     <img src="sa-elite-logo.png" alt="Team Logo" style={{ width: '60px', height: 'auto' }} />
   </Box>
 
   <Text
-  mt={2}
-  color="#F8F8FF"
-  fontFamily="'Roboto', serif"
-  fontWeight="bold"
-  fontSize="md"
-  textAlign="center"
-  textShadow="2px 2px 5px rgba(0, 0, 0, 0.7)"
->
-  Digs Per Set: 4.5
-</Text>
+    mt={2}
+    color="#F8F8FF"
+    fontFamily="'Roboto', serif"
+    fontWeight="bold"
+    fontSize="md"
+    textAlign="center"
+    textShadow="2px 2px 5px rgba(0, 0, 0, 0.7)"
+  >
+    Digs Per Set: 4.5
+  </Text>
 <Text
   color="#F8F8FF"
   fontFamily="'Roboto', serif"
