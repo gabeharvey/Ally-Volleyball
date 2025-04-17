@@ -125,3 +125,47 @@
   color: #734F96;
   font-weight: bold;
 }
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+    color: #2e0042; 
+    text-shadow: 0 0 8px #000000, 0 0 35px #000000; 
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    color: #734f96; 
+    text-shadow: 0 0 1px #d3a6d1, 0 0 1px #d3a6d1; 
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    text-shadow: 0 0 2px #7a4d9c, 0 0 4px #7a4d9c, 0 0 6px #7a4d9c;
+  }
+  100% {
+    text-shadow: 0 0 4px #d3a6d1, 0 0 6px #d3a6d1, 0 0 8px #d3a6d1;
+  }
+}
+
+@keyframes sparkleEffect {
+  0% {
+    text-shadow: 0 0 10px #7a4d9c, 0 0 20px #7a4d9c, 0 0 30px #7a4d9c, 0 0 40px #7a4d9c;
+  }
+  50% {
+    text-shadow: 0 0 20px #7a4d9c, 0 0 40px #7a4d9c, 0 0 50px #7a4d9c, 0 0 60px #7a4d9c;
+  }
+  100% {
+    text-shadow: none; 
+  }
+}
+
+.shimmer-text {
+  display: inline-block;
+  font-size: 4rem;
+  font-family: 'Bungee', serif;
+  color: #2e0042;
+  animation: dropDown 1.5s ease-out forwards, shimmerSweep 2s ease-out forwards, sparkleEffect 1.5s ease-in-out 3s forwards;
+}

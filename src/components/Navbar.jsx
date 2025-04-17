@@ -80,22 +80,21 @@ const Navbar = () => {
                     flexDirection={isMobile ? 'column' : 'row'}
                     alignItems={isMobile ? 'flex-start' : 'center'}
                 >
-                    <Heading
-                        as={ScrollLink}
-                        to="home"
-                        spy={true}
-                        smooth={true}
-                        offset={-100}
-                        duration={500}
-                        fontSize={{ base: '3xl', md: '4xl' }}
-                        fontFamily="'Bungee', serif"
-                        color="#734F96"
-                        letterSpacing="wider"
-                        mb={isMobile ? 2 : 0}
-                        style={{ cursor: 'pointer' }}
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}  
+                        animate={{ opacity: 1, y: 0 }}  
+                        transition={{ duration: 1, ease: 'easeOut' }}  
                     >
-                        Ally Rosa
-                    </Heading>
+                                <Heading
+                                    fontSize={{ base: '3xl', md: '4xl' }}
+                                    fontFamily="'Bungee', serif"
+                                    letterSpacing="wider"
+                                    mb={4}
+                                    className="shimmer-text"
+                                    >
+                                    Ally Rosa
+                                </Heading>
+                    </motion.div>
                 </Flex>
                 <Spacer />
                 <IconButton
