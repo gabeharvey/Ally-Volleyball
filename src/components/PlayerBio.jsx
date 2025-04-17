@@ -29,18 +29,60 @@ function PlayerProfile() {
     ],
   };
 
-  const volleyballAnimation = useSpring({
-    loop: true,
-    from: { transform: 'translateY(0px) rotate(0deg)' },
+  const volleyballSpring = useSpring({
+    from: { transform: 'translateX(0px) translateY(0px) rotate(0deg) scale(1)' },
     to: async (next) => {
-      // eslint-disable-next-line no-constant-condition
-      while (1) {
-        await next({ transform: 'translateY(-20px) rotate(30deg)' });
-        await next({ transform: 'translateY(0px) rotate(0deg)' });
+      const bounceSequence = (dir = 1) => ([
+        { x: 100 * dir, y: -50, r: 90 * dir, s: 1.05 },
+        { x: 200 * dir, y: -80, r: 180 * dir, s: 1.1 },
+        { x: 300 * dir, y: -60, r: 270 * dir, s: 1.05 },
+        { x: 400 * dir, y: -30, r: 360 * dir, s: 1 },
+      ]);
+  
+      while (true) {
+        for (const dir of [1, -1]) {
+          const steps = bounceSequence(dir);
+          for (const step of steps) {
+            // Upward arc
+            await next({
+              transform: `translateX(${step.x}px) translateY(${step.y}px) rotate(${step.r}deg) scale(${step.s})`,
+              config: { mass: 1, tension: 250, friction: 10 },
+            });
+            // Ground impact (squish + rotate a bit more)
+            await next({
+              transform: `translateX(${step.x}px) translateY(0px) rotate(${step.r + 45 * dir}deg) scale(0.98)`,
+              config: { mass: 1, tension: 220, friction: 14 },
+            });
+            // Restore shape
+            await next({
+              transform: `translateX(${step.x}px) translateY(0px) rotate(${step.r + 45 * dir}deg) scale(1)`,
+              config: { tension: 200, friction: 6 },
+            });
+          }
+        }
       }
     },
-    config: { tension: 150, friction: 10 },
+    config: { mass: 1, tension: 250, friction: 10 },
   });  
+  
+  const smokeAndBounce = useSpring({
+    from: {
+      opacity: 0,
+      transform: 'translateY(20px)',
+      filter: 'blur(8px)',
+    },
+    to: async (next) => {
+      // Initial smoke effect (fade in and blur)
+      await next({ opacity: 1, transform: 'translateY(0px)', filter: 'blur(0px)' });
+  
+      // Bounce effect after text appears
+      await next({ transform: 'translateY(-10px)', config: { tension: 180, friction: 12 } });
+      await next({ transform: 'translateY(5px)', config: { tension: 180, friction: 12 } });
+      await next({ transform: 'translateY(0px)', config: { tension: 180, friction: 12 } });
+    },
+    config: { tension: 120, friction: 20 },
+    delay: 300,
+  });
 
   return (
     <VStack
@@ -48,9 +90,18 @@ function PlayerProfile() {
       p={6}
       mt={12} 
     >
-      <Heading fontSize="3xl" fontWeight="medium" color="#E6E6FA" fontFamily="'Bungee', serif" mb="5">
-        {player.name}
-      </Heading>
+<animated.div style={smokeAndBounce}>
+  <Heading
+    fontSize="3xl"
+    fontWeight="medium"
+    color="#E6E6FA"
+    fontFamily="'Bungee', serif"
+    mb="5"
+  >
+    {player.name}
+  </Heading>
+</animated.div>
+
 
       {/* Play Button */}
 {/* Play/Pause Button */}
@@ -216,15 +267,14 @@ function PlayerProfile() {
           src="/volleyball-2.png"
           alt="Player Image"
           style={{
+            ...volleyballSpring,
             maxWidth: '100%',
             maxHeight: '100%',
             objectFit: 'contain',
-            ...volleyballAnimation,
             willChange: 'transform',
           }}
         />
       </Box>
-
     </VStack>
   );
 }
