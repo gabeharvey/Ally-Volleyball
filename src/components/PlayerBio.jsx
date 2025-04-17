@@ -29,31 +29,32 @@ function PlayerProfile() {
     ],
   };
 
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const maxX = isMobile ? 80 : 400;
+  const maxY = isMobile ? -30 : -80;
+  
   const volleyballSpring = useSpring({
     from: { transform: 'translateX(0px) translateY(0px) rotate(0deg) scale(1)' },
     to: async (next) => {
       const bounceSequence = (dir = 1) => ([
-        { x: 100 * dir, y: -50, r: 90 * dir, s: 1.05 },
-        { x: 200 * dir, y: -80, r: 180 * dir, s: 1.1 },
-        { x: 300 * dir, y: -60, r: 270 * dir, s: 1.05 },
-        { x: 400 * dir, y: -30, r: 360 * dir, s: 1 },
+        { x: 0.25 * maxX * dir, y: 0.5 * maxY, r: 90 * dir, s: 1.05 },
+        { x: 0.5 * maxX * dir, y: maxY, r: 180 * dir, s: 1.1 },
+        { x: 0.75 * maxX * dir, y: 0.75 * maxY, r: 270 * dir, s: 1.05 },
+        { x: maxX * dir, y: 0.25 * maxY, r: 360 * dir, s: 1 },
       ]);
   
       while (true) {
         for (const dir of [1, -1]) {
           const steps = bounceSequence(dir);
           for (const step of steps) {
-            // Upward arc
             await next({
               transform: `translateX(${step.x}px) translateY(${step.y}px) rotate(${step.r}deg) scale(${step.s})`,
               config: { mass: 1, tension: 250, friction: 10 },
             });
-            // Ground impact (squish + rotate a bit more)
             await next({
               transform: `translateX(${step.x}px) translateY(0px) rotate(${step.r + 45 * dir}deg) scale(0.98)`,
               config: { mass: 1, tension: 220, friction: 14 },
             });
-            // Restore shape
             await next({
               transform: `translateX(${step.x}px) translateY(0px) rotate(${step.r + 45 * dir}deg) scale(1)`,
               config: { tension: 200, friction: 6 },
@@ -62,8 +63,8 @@ function PlayerProfile() {
         }
       }
     },
-    config: { mass: 1, tension: 250, friction: 10 },
-  });  
+  });
+  
   
   const smokeAndBounce = useSpring({
     from: {
@@ -72,10 +73,7 @@ function PlayerProfile() {
       filter: 'blur(8px)',
     },
     to: async (next) => {
-      // Initial smoke effect (fade in and blur)
       await next({ opacity: 1, transform: 'translateY(0px)', filter: 'blur(0px)' });
-  
-      // Bounce effect after text appears
       await next({ transform: 'translateY(-10px)', config: { tension: 180, friction: 12 } });
       await next({ transform: 'translateY(5px)', config: { tension: 180, friction: 12 } });
       await next({ transform: 'translateY(0px)', config: { tension: 180, friction: 12 } });
@@ -102,9 +100,6 @@ function PlayerProfile() {
   </Heading>
 </animated.div>
 
-
-      {/* Play Button */}
-{/* Play/Pause Button */}
 {isPlaying ? (
   <button
     onClick={() => {

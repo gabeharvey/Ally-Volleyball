@@ -2,34 +2,34 @@ import { Box, Text, VStack, SimpleGrid, useBreakpointValue } from '@chakra-ui/re
 import { useSpring, animated } from '@react-spring/web';
 
 function VolleyballFilm() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const maxX = isMobile ? 100 : 400; 
+  const maxY = isMobile ? -30 : -90;  
+
   const volleyballSpring = useSpring({
     from: { transform: 'translateX(0px) translateY(0px) rotate(0deg) scale(1)' },
     to: async (next) => {
-      // Define a much faster, more intense rotation sequence
       const bounceSequence = (dir = 1) => [
-        { x: 80 * dir, y: -40, r: 720 * dir, s: 1.05 },  // Start with intense rotation
-        { x: 150 * dir, y: -70, r: 1440 * dir, s: 1.1 }, // More rotations per step
-        { x: 250 * dir, y: -90, r: 2160 * dir, s: 1.15 }, // High speed spin
-        { x: 300 * dir, y: -60, r: 2880 * dir, s: 1.1 },  // Intense speed
-        { x: 350 * dir, y: -30, r: 3600 * dir, s: 1.05 }, // Fast spin for dramatic effect
-        { x: 400 * dir, y: 0, r: 4320 * dir, s: 1 },     // Maximum spin for final frame
+        { x: 0.2 * maxX * dir, y: 0.5 * maxY, r: 720 * dir, s: 1.05 },
+        { x: 0.3 * maxX * dir, y: 0.75 * maxY, r: 1440 * dir, s: 1.1 },
+        { x: 0.5 * maxX * dir, y: maxY, r: 2160 * dir, s: 1.15 },
+        { x: 0.6 * maxX * dir, y: 0.5 * maxY, r: 2880 * dir, s: 1.1 },
+        { x: 0.7 * maxX * dir, y: 0.25 * maxY, r: 3600 * dir, s: 1.05 },
+        { x: maxX * dir, y: 0, r: 4320 * dir, s: 1 },
       ];
 
       while (true) {
         for (const dir of [1, -1]) {
           const steps = bounceSequence(dir);
           for (const step of steps) {
-            // Upward arc with smooth easing
             await next({
               transform: `translateX(${step.x}px) translateY(${step.y}px) rotate(${step.r}deg) scale(${step.s})`,
               config: { mass: 1, tension: 300, friction: 12 },
             });
-            // Ground impact (squish with rotation)
             await next({
               transform: `translateX(${step.x}px) translateY(0px) rotate(${step.r + 180 * dir}deg) scale(0.95)`,
               config: { mass: 1, tension: 350, friction: 16 },
             });
-            // Restore shape with ease
             await next({
               transform: `translateX(${step.x}px) translateY(0px) rotate(${step.r + 180 * dir}deg) scale(1)`,
               config: { tension: 400, friction: 12 },
