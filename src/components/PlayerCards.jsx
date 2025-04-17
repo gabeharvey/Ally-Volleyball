@@ -92,16 +92,16 @@ function Card({ frontImg, name, bio, funFact, cardNumber, flipSound }) {
   >
     Digs Per Set: 4.5
   </Text>
-<Text
-  color="#F8F8FF"
-  fontFamily="'Roboto', serif"
-  fontWeight="bold"
-  fontSize="md"
-  textAlign="center"
-  textShadow="2px 2px 5px rgba(0, 0, 0, 0.7)"
->
-  Serve Receive Rating: 2.3
-</Text>
+  <Text
+    color="#F8F8FF"
+    fontFamily="'Roboto', serif"
+    fontWeight="bold"
+    fontSize="md"
+    textAlign="center"
+    textShadow="2px 2px 5px rgba(0, 0, 0, 0.7)"
+  >
+    Serve Receive Rating: 2.3
+  </Text>
   <Text
     mt={4}
     color="#F8F8FF"
