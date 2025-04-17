@@ -249,27 +249,27 @@ function PlayerProfile() {
           </Flex>
         </Box>
       </Flex>
-      <Box
-        w="100%"
-        h="300px"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        bg="transparent"
-        border="none"
-      >
-        <animated.img
-          src="/volleyball-2.png"
-          alt="Player Image"
-          style={{
-            ...volleyballSpring,
-            maxWidth: '100%',
-            maxHeight: '100%',
-            objectFit: 'contain',
-            willChange: 'transform',
-          }}
-        />
-      </Box>
+        <Box
+          w="100%"
+          h="300px"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          bg="transparent"
+          border="none"
+        >
+          <animated.img
+            src="/volleyball-2.png"
+            alt="Player Image"
+            style={{
+              ...volleyballSpring,
+              maxWidth: '100%',
+              maxHeight: '100%',
+              objectFit: 'contain',
+              willChange: 'transform',
+            }}
+          />
+        </Box>
     </VStack>
   );
 }
